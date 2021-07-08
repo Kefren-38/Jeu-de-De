@@ -1,0 +1,11 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@100;300&display=swap');
+
+body {
+    font-family:'Lato', serif;
+    background: rgb(202, 202, 202);
+    margin: 10px;
+}
+
+#NewGame {
+    width: 35px;
+}
