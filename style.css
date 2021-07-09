@@ -6,6 +6,33 @@ body {
     margin: 10px;
 }
 
+h1 {
+    font-size: 35px;
+}
+
+h2 {
+    font-size: 60px;
+    font-style: bold;
+}
+
 #NewGame {
-    width: 35px;
+    width: 30px;
+}
+
+header {
+    margin: 25px;
+}
+
+main {
+    margin: 50px;
+}
+
+.score {
+    font-size: 70px;
+    color: rgb(204, 4, 4);
+    padding: 15px;
+}
+
+.de {
+    background: white; 
 }
