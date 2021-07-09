@@ -6,13 +6,10 @@ body {
     margin: 10px;
 }
 
+
+/* TITRE "NEW GAME" */
 h1 {
     font-size: 35px;
-}
-
-h2 {
-    font-size: 60px;
-    font-style: bold;
 }
 
 #NewGame {
@@ -23,16 +20,51 @@ header {
     margin: 25px;
 }
 
+
+/* TITRE JOUEURS */
+h2 {
+    font-size: 60px;
+    font-style: bold;
+}
+
+
+/* CORPS DU JEU */
 main {
     margin: 50px;
 }
 
+
+/* SCORE TOTAL DU JOUEUR */
 .score {
     font-size: 70px;
     color: rgb(204, 4, 4);
     padding: 15px;
 }
 
+
+/* LE DE */
 .de {
     background: white; 
 }
+
+/* ESPACE VIDE */ 
+.vide {
+    margin: 50px;
+}
+
+
+/* CURRENT */
+h3 {
+    color: white;
+    font-size: 20px;
+}
+
+.card {
+    padding: 15px;
+}
+
+.card-text {
+    font-size: 30px;
+}
+
+
