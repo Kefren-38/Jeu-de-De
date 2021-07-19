@@ -13,7 +13,7 @@ h1 {
     font-size: 35px;
 }
 
-#NewGame {
+#bouton {
     width: 30px;
 }
 
@@ -43,10 +43,6 @@ main {
 }
 
 
-/* LE DE */
-.de {
-    background: white; 
-}
 
 /* ESPACE VIDE */ 
 .vide {
@@ -56,16 +52,18 @@ main {
 
 /* CURRENT */
 h3 {
-    color: white;
+    color: black;
     font-size: 20px;
 }
 
 .card {
     padding: 15px;
+    max-width: 170px;
 }
 
 .card-text {
     font-size: 30px;
+    color: white;
 }
 
 
