@@ -13,7 +13,7 @@
     <!-- HEADER -->
     <header class= "container-fluid">
         <div class="row justify-content-center" >
-            <div class="col-12 text-center">
+            <div class="col-12 text-center" id="btn-NEWGAME">
                 <h1 class="title">
                     <img src="images/Button-NEW-GAME.png" alt="Nouvelle partie" id="bouton" class="py-3">
                     NEW GAME
@@ -39,7 +39,7 @@
         <!-- POINTS JOUEUR 1 -->
         <div class="row justify-content-center">
             <div class="col-xl-5 col-lg-4 col-sm-3 text-center">
-                <p class="score">14</p>
+                <p class="score" id="globalScoreJ1">14</p>
             </div>
 
 
@@ -51,7 +51,7 @@
 
         <!-- POINTS JOUEUR 2 -->
             <div class="col-xl-5 col-lg-4 col-sm-3 text-center">
-                <p class="score">17</p>
+                <p class="score" id="globalScoreJ2">17</p>
             </div>
         </div>
 
@@ -63,20 +63,20 @@
             <div class=" col-5 text-center py-4 ">
                 <div class="card bg-danger shadow">
                     <h3 class="card-title">CURRENT</h3>
-                    <p class="card-text">11</p>
+                    <p class="card-text" id="roundScoreJ1">11</p>
                 </div>
             </div>
 
             <!-- ROLL DICE -->
             <div class="text-center">
-                <p>
-                    <img src="images/Roll-dice.png" alt="Roll Dice" id="bouton" class="py-3">
+                <p id="rollDice">
+                    <img src="images/Roll-dice.png" alt="Roll Dice" id="bouton" class="py-3 bouton">
                 ROLL DICE
                 </p>
 
-            <!-- ROLL DICE -->
-                <p>
-                    <img src="images/Hold.png" alt="Hold!"" id="bouton">
+            <!-- HOLD! -->
+                <p id="hold">
+                    <img src="images/Hold.png" alt="Hold!" id="bouton">
                 HOLD!    
                 </p>
             </div>
@@ -86,7 +86,7 @@
             <div class="col-5 text-center py-4">
                 <div class="card bg-danger shadow">
                     <h3 class="card-title">CURRENT</h3>
-                    <p class="card-text">0</p>
+                    <p class="card-text" id="roundScoreJ2">0</p>
                 </div>
             </div>
 
