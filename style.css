@@ -59,6 +59,9 @@ h3 {
 .card {
     padding: 15px;
     max-width: 170px;
+    margin: 0 auto;
+    float: none;
+    margin-bottom: 10px;
 }
 
 .card-text {
