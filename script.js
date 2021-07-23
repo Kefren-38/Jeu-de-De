@@ -50,7 +50,12 @@ $(() => {
         $('#dice').attr("src", images[dice]);
 
         //3. Affiche le résultat du dé dans "current" du joueur1
-         $('#roundScoreJ1').text(dice+1);
+        if($('.namePlayer1').hasClass('active') == true) {
+            $('#roundScoreJ1').text(dice+1);
+        } else {
+            $('#roundScoreJ2').text(dice+1);
+        }
+    
       
         //4. Si le résultat est 1, le joueur 1 perd ses points 
         if(dice === 0) {
@@ -66,11 +71,13 @@ $(() => {
     //NEXTPLAYER
     //Fonction de changement de joueur 
     function nextPlayer () {
-        if($('#globalScoreJ1, .namePlayer1').css('active') !== true) {
+        if($('#globalScoreJ1, .namePlayer1').hasClass('active') == true) {
             $('#globalScoreJ1, .namePlayer1').removeClass('active');
+            $('#roundScoreJ1').text(0);
             $('#globalScoreJ2, .namePlayer2').addClass('active');
         } else {
             $('#globalScoreJ2, .namePlayer2').removeClass('active');
+            $('#roundScoreJ2').text(0);
             $('#globalScoreJ1, .namePlayer1').addClass('active');
         }
         
@@ -81,17 +88,23 @@ $(() => {
         let scoreRound = $('#roundScoreJ1').text()
         let scoreGlobal = $('#globalScoreJ1').text()
         let score = parseInt(scoreRound) + parseInt(scoreGlobal)
+
+        let scoreRoundJ2 = $('#roundScoreJ2').text()
+        let scoreGlobalJ2 = $('#globalScoreJ2').text()
+        let scoreJ2 = parseInt(scoreRoundJ2) + parseInt(scoreGlobalJ2)
         
-        if($('#globalScoreJ1, .namePlayer1').css('active') !== true){
+        if($('#globalScoreJ1, .namePlayer1').hasClass('active') == true){
             $('#globalScoreJ1').text(score);
             nextPlayer()
         } else { 
-            $('#globalScoreJ2').text($('#roundScoreJ1').text());
+            $('#globalScoreJ2').text(scoreJ2);
             nextPlayer()    
         }
 
         if(score >= 100) {
             $('.namePlayer1').text('WINNER!').addClass('winner')
+        } if(scoreJ2 >= 100) {
+            $('.namePlayer2').text('WINNER!').addClass('winner')
         }
         
         $('#dice').attr("src", images[0]);
