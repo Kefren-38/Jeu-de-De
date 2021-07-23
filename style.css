@@ -71,3 +71,7 @@ h3 {
 .active {
     font-weight: bold;
 }
+
+.winner {
+    color: rgb(31, 211, 31);
+}

@@ -1,4 +1,4 @@
-// AJAX
+// jQuery
 $(() => {
     let newGame = $('#btn-NEWGAME')
     let rollDice = $('#rollDice')
@@ -28,9 +28,12 @@ $(() => {
         //3. Supprime la class "active" au joueur 2
         $('.namePlayer2, #globalScoreJ2').removeClass('active');
 
-        //4. Affiche le dé par défault: le 1
+        //4. Affiche le dé par défaut: le 1
         $('#dice').attr("src", images[0]);
 
+        //5. Affiche le nom des joueurs par défaut
+        $('.namePlayer1').text('PLAYER 1').removeClass('winner')
+        $('.namePlayer2').text('PLAYER 2').removeClass('winner')
     })
 
 
@@ -47,7 +50,7 @@ $(() => {
         $('#dice').attr("src", images[dice]);
 
         //3. Affiche le résultat du dé dans "current" du joueur1
-        $('#roundScoreJ1').text(dice+1);
+         $('#roundScoreJ1').text(dice+1);
       
         //4. Si le résultat est 1, le joueur 1 perd ses points 
         if(dice === 0) {
@@ -67,9 +70,10 @@ $(() => {
             $('#globalScoreJ1, .namePlayer1').removeClass('active');
             $('#globalScoreJ2, .namePlayer2').addClass('active');
         } else {
-            $('#globalScoreJ1, .namePlayer1').addClass('active');
             $('#globalScoreJ2, .namePlayer2').removeClass('active');
+            $('#globalScoreJ1, .namePlayer1').addClass('active');
         }
+        
     }
 
 
@@ -86,7 +90,13 @@ $(() => {
             nextPlayer()    
         }
 
+        if(score >= 100) {
+            $('.namePlayer1').text('WINNER!').addClass('winner')
+        }
+        
+        $('#dice').attr("src", images[0]);
     })
-//
+//  
+
 
 });
