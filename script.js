@@ -159,5 +159,14 @@ $(() => {
         $(this).removeClass('active');
     })
 
+    $('.bi').click(function () {
+        if ($('.regles').is(':visible')) {
+            $('.regles').fadeOut(300);
+            $('.bi').css('color', 'rgb(39, 39, 39)')
+        } else {
+            $('.regles').fadeIn(1000); 
+            $('.bi').css('color', '#0d6efd')
+        }
+    })
 
 });

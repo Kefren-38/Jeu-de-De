@@ -4,13 +4,14 @@ body {
     font-family:'Lato', serif;
     background: rgb(202, 202, 202);
     margin: 10px;
+    font-size: 2rem;
 }
 
 
 
 /* TITRE "NEW GAME" */
 h1 {
-    font-size: 35px;
+    font-size: 1,5em;
 }
 
 #bouton {
@@ -36,7 +37,7 @@ main {
 
 /* SCORE TOTAL DU JOUEUR */
 .score {
-    font-size: 70px;
+    font-size: 2.4em;
     color: rgb(204, 4, 4);
     padding: 15px;
     display: none;
@@ -53,7 +54,7 @@ main {
 /* CURRENT */
 h3 {
     color: black;
-    font-size: 20px;
+    font-size: 0.7em;
 }
 
 .card {
@@ -66,7 +67,7 @@ h3 {
 }
 
 .card-text {
-    font-size: 30px;
+    font-size: 1em;
     color: white;
 }
 
@@ -85,4 +86,17 @@ h3 {
 
 #hold, #rollDice {
     display: none;
+    font-size: 0.7em;
+}
+
+.regles {
+    margin: 1em;
+    padding: 1em;
+    font-size: 0.6em;
+    color: white;
+    display: none;
+}
+
+.bi {
+    height: 1.2em;
 }

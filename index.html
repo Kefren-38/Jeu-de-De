@@ -12,6 +12,7 @@
 </head>
 <body>
     <!-- HEADER -->
+    <!-- NEW GAME -->
     <header class= "container-fluid">
         <div class="row justify-content-center" >
             <div class="col-12 text-center" id="btn-NEWGAME">
@@ -23,52 +24,62 @@
        </div>
     </header>
 
+
     <!-- MAIN -->
     <main class= "container-fluid">
         <div class="row cols-6">
         <!-- NOM JOUEUR 1 -->
-            <div class="col-lg-6 col-sm-6 text-center">
+            <div class="col-lg-6 col-sm-6 col-xs-12 text-center">
                 <h2 class="namePlayer1">PLAYER 1</h2>
             </div>
 
         <!-- NOM JOUEUR 2 -->
-            <div class="col-lg-6 col-sm-6 text-center">
+            <div class="col-lg-6 col-sm-6 col-xs-12 text-center">
                 <h2 class="namePlayer2">PLAYER 2</h2>
             </div>
         </div>
 
+
+
+
         <!-- POINTS JOUEUR 1 -->
         <div class="row justify-content-center">
-            <div class="col-xl-5 col-lg-4 col-sm-3 text-center">
-                <p class="score" id="globalScoreJ1">12</p>
+            <div class="col-xl-3 col-lg-4 col-sm-3 text-center">
+                <p class="score" id="globalScoreJ1">0</p>
             </div>
 
 
+
         <!-- LE DE -->
-            <div class="text-center">
+            <div class="col-3 text-center">
                 <img src="images/de-1.png" alt="de" class="rounded" id="dice">
             </div>    
 
 
+
         <!-- POINTS JOUEUR 2 -->
-            <div class="col-xl-5 col-lg-4 col-sm-3 text-center">
-                <p class="score" id="globalScoreJ2">17</p>
+            <div class="col-xl-3 col-lg-4 col-sm-3 text-center">
+                <p class="score" id="globalScoreJ2">0</p>
             </div>
         </div>
 
         <div class="row vide">
         </div>
 
+
+
+    
         <!-- CURRENT JOUEUR 1 -->
-        <div class="row current justify-content-around">
-            <div class=" col-5 text-center py-4 ">
+        <div class="row justify-content-center">
+            <div class="col-4 text-center py-4 ">
                 <div class="card shadow" id="cardJ1">
                     <h3 class="card-title">CURRENT</h3>
-                    <p class="card-text" id="roundScoreJ1">11</p>
+                    <p class="card-text" id="roundScoreJ1">0</p>
                 </div>
             </div>
 
             <!-- ROLL DICE -->
+            <div class="col-2 col-sm-3">
             <div class="text-center">
                 <p id="rollDice">
                     <img src="images/Roll-dice.png" alt="Roll Dice" id="bouton" class="py-3 bouton">
@@ -81,19 +92,39 @@
                 HOLD!    
                 </p>
             </div>
+            </div>
 
 
             <!-- CURRENT JOUEUR 2 -->
-            <div class="col-5 text-center py-4">
+            <div class="col-4 text-center py-4">
                 <div class="card shadow" id="cardJ2">
                     <h3 class="card-title">CURRENT</h3>
                     <p class="card-text" id="roundScoreJ2">0</p>
                 </div>
             </div>
-
-
         </div>
 
+        <div class="row justify-content-center mb-3">
+            <div class="col-12 text-center mb-3">
+                <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" class="bi bi-info-circle-fill" viewBox="0 0 16 16">
+                    <path d="M8 16A8 8 0 1 0 8 0a8 8 0 0 0 0 16zm.93-9.412-1 4.705c-.07.34.029.533.304.533.194 0 .487-.07.686-.246l-.088.416c-.287.346-.92.598-1.465.598-.703 0-1.002-.422-.808-1.319l.738-3.468c.064-.293.006-.399-.287-.47l-.451-.081.082-.381 2.29-.287zM8 5.5a1 1 0 1 1 0-2 1 1 0 0 1 0 2z"/>
+                  </svg>
+            </div>
+            <div clas="col-6">
+                <p class="text-center bg-primary shadow rounded regles"> 
+                    Règles du jeu</br>
+                    Chaque joueur débute le jeu avec zéro point.</br>
+                    Le but est d'arriver en <strong>premier à 100 points.</strong></br>
+
+                    Lors de votre tour: lancez le dé autant de fois que vous le souhaitez. Votre score "current" sera
+                    ensuite ajouté au total de vos points.</br>
+
+                    <strong class="">Attention: si vous obtenez un 1 lors de votre lancé , votre score "current" sera remis à zéro
+                    et vous perdez votre tour. </strong>
+                    <p>
+                </p>   
+            </div>
+        </div>
     </main>
 
     
