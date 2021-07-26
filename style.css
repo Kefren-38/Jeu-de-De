@@ -76,8 +76,13 @@ h3 {
 
 .winner {
     color: rgb(31, 211, 31);
+    font-weight: bold;
 }
 
 .zero {
     background-color: rgb(65, 65, 65);
+}
+
+#hold, #rollDice {
+    display: none;
 }

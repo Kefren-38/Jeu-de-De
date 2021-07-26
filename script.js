@@ -19,8 +19,9 @@ $(() => {
     //Retour des scores à zéro
 
     function init () {
-        //1. Retour des scores à zéro
+        //1. Apparition et retour des scores à zéro
         $('#globalScoreJ1, #globalScoreJ2, #roundScoreJ1, roundScoreJ2, .namePlayer1, .namePlayer2').delay(500).fadeIn(700).text(0);
+        $('#rollDice, #hold').delay(500).fadeIn(700)
 
         //2. Ajoute la class "active" au joueur 1
         $('.namePlayer1, #globalScoreJ1').removeClass('active');
@@ -135,10 +136,28 @@ $(() => {
     })
  
     function endGame () {
-        $('#globalScoreJ1, #globalScoreJ2').delay(2300).fadeOut(1000)
-        init()
+        $('#rollDice, #hold').fadeOut(1000);    
     }
 
+    
+    //Animations survole de la souris
+    $('#hold').hover(function () {
+        $(this).addClass('active');
+    }, function () {
+        $(this).removeClass('active');
+    })
+
+    $('h1').hover(function () {
+        $(this).addClass('active');
+    }, function () {
+        $(this).removeClass('active');
+    })
+    
+    $('#rollDice').hover(function () {
+        $(this).addClass('active');
+    }, function () {
+        $(this).removeClass('active');
+    })
 
 
 });
