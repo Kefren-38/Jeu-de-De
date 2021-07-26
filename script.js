@@ -17,13 +17,13 @@ $(() => {
     
     //NEW GAME 
     //Retour des scores à zéro
-    $('#btn-NEWGAME').click( function () {
-        
+
+    function init () {
         //1. Retour des scores à zéro
-        $('#globalScoreJ1, #globalScoreJ2, #roundScoreJ1, roundScoreJ2').text(0);
+        $('#globalScoreJ1, #globalScoreJ2, #roundScoreJ1, roundScoreJ2, .namePlayer1, .namePlayer2').delay(500).fadeIn(700).text(0);
 
         //2. Ajoute la class "active" au joueur 1
-        $('.namePlayer1, #globalScoreJ1').addClass('active');
+        $('.namePlayer1, #globalScoreJ1').removeClass('active');
 
         //3. Supprime la class "active" au joueur 2
         $('.namePlayer2, #globalScoreJ2').removeClass('active');
@@ -34,6 +34,11 @@ $(() => {
         //5. Affiche le nom des joueurs par défaut
         $('.namePlayer1').text('PLAYER 1').removeClass('winner')
         $('.namePlayer2').text('PLAYER 2').removeClass('winner')
+    }
+
+    $('#btn-NEWGAME').click( function () {
+        init ()
+        $('.namePlayer1, #globalScoreJ1').addClass('active'); 
     })
 
 
@@ -50,17 +55,25 @@ $(() => {
         console.log(dice+1);
         $('#dice').attr("src", images[dice]);
 
+
         //3. Affiche le résultat du dé dans "current" du joueur concerné
         if($('.namePlayer1').hasClass('active') == true) {
-            $('#roundScoreJ1').text(dice+1);
+            let roundScore = $('#roundScoreJ1').text()
+            let totalScoreRound = parseInt(dice+1) + parseInt(roundScore)
+            
+            $('#roundScoreJ1').text(totalScoreRound)
+            
         } else {
-            $('#roundScoreJ2').text(dice+1);
+            let roundScoreJ2 = $('#roundScoreJ2').text()
+            let totalScoreRoundJ2 = parseInt(dice+1) + parseInt(roundScoreJ2)
+            
+            $('#roundScoreJ2').text(totalScoreRoundJ2)
         }
-    
-      
-        //4. Si le résultat est 1, le joueur 1 perd ses points 
+   
+
+        
+        //4. Si le résultat du lancé est 1, le joueur perd ses points
         if(dice === 0) {
-            $('#roundScoreJ1').text(0);
             nextPlayer();
         }
     })
@@ -70,7 +83,7 @@ $(() => {
     //Fonction de changement de joueur 
     function nextPlayer () {
         //1. Si le joueur comporte la class "active" alors changement
-        if($('#globalScoreJ1, .namePlayer1').hasClass('active') == true) {
+        if($('.namePlayer1').hasClass('active') == true) {
             $('#globalScoreJ1, .namePlayer1').removeClass('active');
             $('#roundScoreJ1').text(0);
             $('#globalScoreJ2, .namePlayer2').addClass('active');
@@ -80,6 +93,7 @@ $(() => {
             $('#roundScoreJ2').text(0);
             $('#globalScoreJ1, .namePlayer1').addClass('active');
         }
+        $('#cardJ1, #cardJ2').addClass('card')
         
     }
 
@@ -110,14 +124,21 @@ $(() => {
         //4. Si un des joueur arrive à 100 ou plus, il gagne la partie!
         if(score >= 100) {
             $('.namePlayer1').text('WINNER!').addClass('winner')
+            endGame()
         } if(scoreJ2 >= 100) {
             $('.namePlayer2').text('WINNER!').addClass('winner')
+            endGame()
         }
         
         //5. Affiche le dé par défaut à chaque "HOLD!"
         $('#dice').attr("src", images[0]);
     })
  
+    function endGame () {
+        $('#globalScoreJ1, #globalScoreJ2').delay(2300).fadeOut(1000)
+        init()
+    }
+
 
 
 });

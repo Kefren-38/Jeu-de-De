@@ -39,6 +39,7 @@ main {
     font-size: 70px;
     color: rgb(204, 4, 4);
     padding: 15px;
+    display: none;
 }
 
 
@@ -61,6 +62,7 @@ h3 {
     margin: 0 auto;
     float: none;
     margin-bottom: 10px;
+    background-color: rgb(209, 37, 37);
 }
 
 .card-text {
@@ -74,4 +76,8 @@ h3 {
 
 .winner {
     color: rgb(31, 211, 31);
+}
+
+.zero {
+    background-color: rgb(65, 65, 65);
 }
