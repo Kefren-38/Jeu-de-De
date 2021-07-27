@@ -1,5 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Lato:wght@100;300&display=swap');
 
+/* PARAMETRES PRINCIPAUX DE LA PAGE */
 body {
     font-family:'Lato', serif;
     background: rgb(202, 202, 202);
@@ -51,12 +52,7 @@ main {
 }
 
 
-/* CURRENT */
-h3 {
-    color: black;
-    font-size: 0.7em;
-}
-
+/* CARTES CURRENT */ 
 .card {
     padding: 15px;
     max-width: 190px;
@@ -66,29 +62,42 @@ h3 {
     background-color: rgb(209, 37, 37);
 }
 
+
+/* TITRES CURRENT */
+h3 {
+    color: black;
+    font-size: 0.7em;
+}
+
+
+/* TEXTE CURRENT */ 
 .card-text {
     font-size: 1em;
     color: white;
 }
 
+
+/* CLASS ATTRIBUEE AU JOUEUR DURANT SON TOUR */
 .active {
     font-weight: bold;
 }
 
+
+/* COLOR LE NOM DU JOUEUR EN VERT LORS D'UNE VICTOIRE */
 .winner {
     color: rgb(31, 211, 31);
     font-weight: bold;
 }
 
-.zero {
-    background-color: rgb(65, 65, 65);
-}
 
+/* BOUTONS HOLD! & RollDice */
 #hold, #rollDice {
     display: none;
     font-size: 0.7em;
 }
 
+
+/* FENETRE DES REGLES DU JEU */
 .regles {
     margin: 1em;
     padding: 1em;
@@ -97,6 +106,8 @@ h3 {
     display: none;
 }
 
+
+/* ICONE 'i' */
 .bi {
     height: 1.2em;
 }

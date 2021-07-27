@@ -161,7 +161,7 @@ $(() => {
 
     //Apparition des règles lors du clique sur le logo "i"
     $('.bi').click(function () {
-        //1. Si regles est visible, alors les cachées
+        //1. Si regles est visible, alors les cachers
         if ($('.regles').is(':visible')) {
             $('.regles').fadeOut(300);
             $('.bi').css('color', 'rgb(39, 39, 39)')
