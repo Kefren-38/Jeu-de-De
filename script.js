@@ -67,7 +67,7 @@ $(() => {
             $('#roundScoreJ2').text(totalScoreRoundJ2)
         }
     
-        //4. Si le résultat du lancé est 1, le joueur perd ses points
+        //4. Si le résultat du lancé est 1, le joueur perd ses points et son tour
         if(dice === 0) {
             nextPlayer();
         }
